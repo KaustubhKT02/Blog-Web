@@ -1,0 +1,37 @@
+<%- include("partials/header") %>
+
+<div class="container blog-content">
+  <% posts.forEach((post) => { %>
+    <div class="post-card d-flex justify-content-between">
+      <h2><%= post.title %></h2>
+
+      <!-- Hover Action Buttons -->
+      <div class="post-action d-flex gap-2">
+        <!-- Edit button -->
+       
+          <a href="/Post?id=<%= post.id %>" title="Edit">
+            <button type="submit" style="background:none; border: none; color: #5C67F2; font-size: 1rem;">
+              <i class="fa-solid fa-pen"></i>
+            </button> 
+          </a>
+        
+
+        <!-- Delete form -->
+        <form action="/delete?id=<%= post.id %>" method="post" style="display:inline;">
+          <button type="submit" style="background:none; border:none; color: #5C67F2; font-size: 1rem;">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <p>
+      Date: <small class="date"><%= new Date().toLocaleDateString() %></small>
+    </p>
+    <p><%= post.content %></p>
+    <p>Author: <small><%= post.author %></small></p>
+    <hr>
+  <% }); %>
+</div>
+
+<%- include("partials/footer") %>
