@@ -33,6 +33,10 @@ app.get("/Post", (req, res) => {
   res.render("post.ejs", { post });
 });
 
+// About route
+app.get("/About", (req, res) => {
+  res.render("About");
+});
 
 // Create a new post
 app.post("/Blog", (req, res) => {
