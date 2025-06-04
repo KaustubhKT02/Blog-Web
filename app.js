@@ -33,7 +33,7 @@ app.get("/Blog", (req, res) => {
 });
 
 // New/Edit post form
-app.get("/Post", (req, res) => {
+app.get("/post", (req, res) => {
   const postId = parseInt(req.query.id);
   const post = posts.find((p) => p.id === postId);
   res.render("post.ejs", { post });
