@@ -4,7 +4,7 @@ This is a simple blog web application built using **Node.js**, **Express.js**, a
 
 ---
 
-## 🌐 Live Demo: 
+## 🌐 Live Demo: [View Website](https://blog-l72m.onrender.com)
 
 ---
 
